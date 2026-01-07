@@ -1,0 +1,7 @@
+summary = "Volume & Alimentation"
+description = """permet un contr?le rapide du volume de NVDA et des fonctions d'alimentation de votre ordinateur
+Raccourcis clavier :
+NVDA+Shift+PageUp    Augmenter le volume de NVDA
+NVDA+Shift+PageDown  Diminuer le volume de NVDA
+Alt+Windows+R        Red?marrer l'ordinateur
+Alt+Windows+S        Arr?ter l'ordinateur"""

@@ -1,0 +1,7 @@
+summary = "Volume&Power"
+description = """provides quick control over your computer's NVDA volume and power functions
+Hot Keys:
+NVDA+Shift+PageUp Increase NVDA volume
+NVDA+Shift+PageDown Decrease NVDA volume
+Alt+Windows+R Restart computer
+Alt+Windows+S Shutdown computer"""
