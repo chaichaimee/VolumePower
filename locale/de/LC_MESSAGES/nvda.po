@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Volume&Power NVDA Add-on\n"
+"Project-Id-Version: Volume&Power 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 00:00+0000\n"
-"PO-Revision-Date: 2026-01-07 14:40+0700\n"
-"Last-Translator: Chai Chaimee <chai.chaimee@example.com>\n"
+"POT-Creation-Date: 2026-01-08 07:51+0700\n"
+"PO-Revision-Date: 2026-01-08 07:54+0700\n"
+"Last-Translator: Anonymous <anonymous@example.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -12,58 +12,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.7\n"
 
-#: __init__.py:45
+#: __init__.py:41
 msgid "Volume&Power"
-msgstr "Lautstärke & Energie"
+msgstr "Lautstärke&Strom"
 
-#: __init__.py:64
+#: __init__.py:47 __init__.py:67
 msgid "Error: No synthesizer available"
-msgstr "Fehler: Kein Synthesizer verfügbar"
+msgstr "Fehler: Kein Sprachausgabemodul verfügbar"
 
-#: __init__.py:72
+#: __init__.py:56 __init__.py:76
 msgid "{volume}%"
 msgstr "{volume}%"
 
-#: __init__.py:75
+#: __init__.py:59
 msgid "Error: Failed to increase NVDA volume"
-msgstr "Fehler: Konnte NVDA-Lautstärke nicht erhöhen"
+msgstr "Fehler: NVDA-Lautstärke konnte nicht erhöht werden"
 
-#: __init__.py:77
+#: __init__.py:62
 msgid "Increase NVDA volume 5%"
-msgstr "NVDA-Lautstärke um 5 % erhöhen"
+msgstr "NVDA-Lautstärke um 5% erhöhen"
 
-#: __init__.py:95
+#: __init__.py:79
 msgid "Error: Failed to decrease NVDA volume"
-msgstr "Fehler: Konnte NVDA-Lautstärke nicht verringern"
+msgstr "Fehler: NVDA-Lautstärke konnte nicht verringert werden"
 
-#: __init__.py:97
+#: __init__.py:82
 msgid "Decrease NVDA volume 5%"
-msgstr "NVDA-Lautstärke um 5 % verringern"
+msgstr "NVDA-Lautstärke um 5% verringern"
 
-#: __init__.py:138
-msgid "Error: nircmd.exe not found"
-msgstr "Fehler: nircmd.exe nicht gefunden"
+#: __init__.py:126
+msgid "Cannot get shutdown privilege"
+msgstr "Berechtigung zum Herunterfahren kann nicht erlangt werden"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Restart"
 msgstr "Neustart"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Shutdown"
 msgstr "Herunterfahren"
 
-#: __init__.py:159
-msgid "Error: Failed to execute shutdown command"
-msgstr "Fehler: Ausführung des Herunterfahrbefehls fehlgeschlagen"
+#: __init__.py:138
+msgid "ExitWindowsEx failed with error {error}"
+msgstr "ExitWindowsEx fehlgeschlagen mit Fehler {error}"
 
-#: __init__.py:163
-msgid "Unexpected error during shutdown"
-msgstr "Unerwarteter Fehler beim Herunterfahren"
+#: __init__.py:143
+msgid "Error: {error}"
+msgstr "Fehler: {error}"
 
-#: __init__.py:172
+#: __init__.py:154
 msgid "Restart the system"
 msgstr "System neu starten"
 
-#: __init__.py:175
+#: __init__.py:157
 msgid "Shutdown the system"
 msgstr "System herunterfahren"

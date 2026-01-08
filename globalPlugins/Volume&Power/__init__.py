@@ -15,8 +15,6 @@ import time
 import threading
 from ctypes import wintypes
 import addonHandler
-import gui
-import wx
 
 # Initialize translation
 addonHandler.initTranslation()
@@ -50,20 +48,6 @@ SE_PRIVILEGE_ENABLED = 0x00000002
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     scriptCategory = _("Volume&Power")
-
-    def _get_nircmd_path(self):
-        """Get the path to nircmd.exe in the tools folder."""
-        try:
-            base_path = os.path.dirname(__file__)
-            nircmd_path = os.path.join(base_path, "tools", "nircmd.exe")
-            if os.path.exists(nircmd_path):
-                return nircmd_path
-            else:
-                logging.error(f"nircmd.exe not found at: {nircmd_path}")
-                return None
-        except Exception as e:
-            logging.error(f"Error getting nircmd path: {str(e)}")
-            return None
 
     def script_vol_up(self, gesture):
         """Increase NVDA speech volume by 5%."""
@@ -148,48 +132,44 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             logging.error(f"Error enabling shutdown privilege: {str(e)}")
             return False
 
-    def _shutdown_with_nircmd(self, reboot=False):
-        """Shutdown or restart system using nircmd.exe."""
+    def _shutdown_system(self, reboot=False):
+        """Shutdown or restart system using Windows API."""
         try:
-            nircmd_path = self._get_nircmd_path()
-            if not nircmd_path:
-                ui.message(_("Error: nircmd.exe not found"))
+            # Windows API constants
+            EWX_SHUTDOWN = 0x00000001
+            EWX_REBOOT = 0x00000002
+            EWX_FORCEIFHUNG = 0x00000010
+
+            # Request shutdown privilege
+            if not self._enable_shutdown_privilege():
+                ui.message(_("Cannot get shutdown privilege"))
                 winsound.Beep(500, 500)
                 return
 
+            # Notify user and wait
             ui.message(_("Restart") if reboot else _("Shutdown"))
-            winsound.Beep(100, 100)
-            
-            # Wait 3 seconds before shutdown/restart
             time.sleep(3)
-            
-            # Execute nircmd command
-            command = "exitwin reboot" if reboot else "exitwin poweroff"
-            subprocess.run(
-                [nircmd_path, command],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                check=True,
-                creationflags=subprocess.CREATE_NO_WINDOW
-            )
-            logging.debug(f"System {'reboot' if reboot else 'shutdown'} initiated via nircmd")
-            
-        except subprocess.CalledProcessError as e:
-            ui.message(_("Error: Failed to execute shutdown command"))
-            winsound.Beep(500, 500)
-            logging.error(f"nircmd failed: {str(e)}")
+
+            # Call Windows API
+            flags = (EWX_REBOOT if reboot else EWX_SHUTDOWN) | EWX_FORCEIFHUNG
+            if not ctypes.windll.user32.ExitWindowsEx(flags, 0):
+                error = ctypes.windll.kernel32.GetLastError()
+                raise Exception(_("ExitWindowsEx failed with error {error}").format(error=error))
+
+            logging.debug(f"System {'reboot' if reboot else 'shutdown'} initiated via Windows API")
+
         except Exception as e:
-            ui.message(_("Unexpected error during shutdown"))
+            ui.message(_("Error: {error}").format(error=str(e)))
             winsound.Beep(500, 500)
-            logging.error(f"Unexpected error in shutdown: {str(e)}")
+            logging.error(f"Shutdown failed: {str(e)}")
 
     def script_restart(self, gesture):
         """Restart the system."""
-        threading.Thread(target=self._shutdown_with_nircmd, args=(True,)).start()
+        threading.Thread(target=self._shutdown_system, args=(True,)).start()
 
     def script_shutdown(self, gesture):
         """Shutdown the system."""
-        threading.Thread(target=self._shutdown_with_nircmd, args=(False,)).start()
+        threading.Thread(target=self._shutdown_system, args=(False,)).start()
 
     script_restart.__doc__ = _("Restart the system")
     script_restart.category = scriptCategory

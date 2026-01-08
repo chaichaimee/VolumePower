@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Volume&Power NVDA Add-on\n"
+"Project-Id-Version: Volume&Power 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 00:00+0000\n"
-"PO-Revision-Date: 2026-01-07 14:39+0700\n"
-"Last-Translator: Chai Chaimee <chai.chaimee@example.com>\n"
+"POT-Creation-Date: 2026-01-08 07:51+0700\n"
+"PO-Revision-Date: 2026-01-08 07:55+0700\n"
+"Last-Translator: Anonymous <anonymous@example.com>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -12,58 +12,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.7\n"
 
-#: __init__.py:45
+#: __init__.py:41
 msgid "Volume&Power"
-msgstr "Volume & Alimentation"
+msgstr "Volume et Alimentation"
 
-#: __init__.py:64
+#: __init__.py:47 __init__.py:67
 msgid "Error: No synthesizer available"
 msgstr "Erreur : Aucun synthétiseur disponible"
 
-#: __init__.py:72
+#: __init__.py:56 __init__.py:76
 msgid "{volume}%"
 msgstr "{volume}%"
 
-#: __init__.py:75
+#: __init__.py:59
 msgid "Error: Failed to increase NVDA volume"
 msgstr "Erreur : Impossible d'augmenter le volume de NVDA"
 
-#: __init__.py:77
+#: __init__.py:62
 msgid "Increase NVDA volume 5%"
-msgstr "Augmenter le volume de NVDA de 5 %"
+msgstr "Augmenter le volume de NVDA de 5%"
 
-#: __init__.py:95
+#: __init__.py:79
 msgid "Error: Failed to decrease NVDA volume"
 msgstr "Erreur : Impossible de diminuer le volume de NVDA"
 
-#: __init__.py:97
+#: __init__.py:82
 msgid "Decrease NVDA volume 5%"
-msgstr "Diminuer le volume de NVDA de 5 %"
+msgstr "Diminuer le volume de NVDA de 5%"
 
-#: __init__.py:138
-msgid "Error: nircmd.exe not found"
-msgstr "Erreur : nircmd.exe non trouvé"
+#: __init__.py:126
+msgid "Cannot get shutdown privilege"
+msgstr "Impossible d'obtenir le privilège d'extinction"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Shutdown"
-msgstr "Arrêter"
+msgstr "Éteindre"
 
-#: __init__.py:159
-msgid "Error: Failed to execute shutdown command"
-msgstr "Erreur : Échec de l'exécution de la commande d'arrêt"
+#: __init__.py:138
+msgid "ExitWindowsEx failed with error {error}"
+msgstr "ExitWindowsEx a échoué avec l'erreur {error}"
 
-#: __init__.py:163
-msgid "Unexpected error during shutdown"
-msgstr "Erreur inattendue lors de l'arrêt"
+#: __init__.py:143
+msgid "Error: {error}"
+msgstr "Erreur : {error}"
 
-#: __init__.py:172
+#: __init__.py:154
 msgid "Restart the system"
 msgstr "Redémarrer le système"
 
-#: __init__.py:175
+#: __init__.py:157
 msgid "Shutdown the system"
-msgstr "Arrêter le système"
+msgstr "Éteindre le système"

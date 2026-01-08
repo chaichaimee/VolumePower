@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Volume&Power NVDA Add-on\n"
+"Project-Id-Version: Volume&Power 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 00:00+0000\n"
-"PO-Revision-Date: 2026-01-07 14:38+0700\n"
-"Last-Translator: Chai Chaimee <chai.chaimee@example.com>\n"
+"POT-Creation-Date: 2026-01-08 07:51+0700\n"
+"PO-Revision-Date: 2026-01-08 07:56+0700\n"
+"Last-Translator: Anonymous <anonymous@example.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -12,58 +12,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.7\n"
 
-#: __init__.py:45
+#: __init__.py:41
 msgid "Volume&Power"
 msgstr "Громкость и Питание"
 
-#: __init__.py:64
+#: __init__.py:47 __init__.py:67
 msgid "Error: No synthesizer available"
 msgstr "Ошибка: Синтезатор недоступен"
 
-#: __init__.py:72
+#: __init__.py:56 __init__.py:76
 msgid "{volume}%"
 msgstr "{volume}%"
 
-#: __init__.py:75
+#: __init__.py:59
 msgid "Error: Failed to increase NVDA volume"
 msgstr "Ошибка: Не удалось увеличить громкость NVDA"
 
-#: __init__.py:77
+#: __init__.py:62
 msgid "Increase NVDA volume 5%"
 msgstr "Увеличить громкость NVDA на 5%"
 
-#: __init__.py:95
+#: __init__.py:79
 msgid "Error: Failed to decrease NVDA volume"
 msgstr "Ошибка: Не удалось уменьшить громкость NVDA"
 
-#: __init__.py:97
+#: __init__.py:82
 msgid "Decrease NVDA volume 5%"
 msgstr "Уменьшить громкость NVDA на 5%"
 
-#: __init__.py:138
-msgid "Error: nircmd.exe not found"
-msgstr "Ошибка: nircmd.exe не найден"
+#: __init__.py:126
+msgid "Cannot get shutdown privilege"
+msgstr "Не удалось получить права на завершение работы"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Restart"
 msgstr "Перезагрузка"
 
-#: __init__.py:141
+#: __init__.py:131
 msgid "Shutdown"
-msgstr "Выключение"
+msgstr "Завершение работы"
 
-#: __init__.py:159
-msgid "Error: Failed to execute shutdown command"
-msgstr "Ошибка: Не удалось выполнить команду выключения"
+#: __init__.py:138
+msgid "ExitWindowsEx failed with error {error}"
+msgstr "Ошибка ExitWindowsEx: {error}"
 
-#: __init__.py:163
-msgid "Unexpected error during shutdown"
-msgstr "Неожиданная ошибка при выключении"
+#: __init__.py:143
+msgid "Error: {error}"
+msgstr "Ошибка: {error}"
 
-#: __init__.py:172
+#: __init__.py:154
 msgid "Restart the system"
 msgstr "Перезагрузить систему"
 
-#: __init__.py:175
+#: __init__.py:157
 msgid "Shutdown the system"
 msgstr "Выключить систему"
