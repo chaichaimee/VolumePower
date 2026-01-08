@@ -1,4 +1,4 @@
-# Volume&Power
+# VolumePower
 
 ![NVDA Logo](https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico)
 
@@ -7,13 +7,13 @@
 ---
 
 **Author:** chai chaimee  
-**Repository:** https://github.com/chaichaimee/Volume-Power
+**Repository:** https://github.com/chaichaimee/VolumePower
 
 ---
 
 ## Description
 
-Volume&Power is an NVDA add-on that provides quick control over your computer's volume and power functions.  
+VolumePower is an NVDA add-on that provides quick control over your computer's volume and power functions.  
 It allows you to adjust NVDA's speech volume and perform system shutdown or restart directly from the keyboard.
 
 ## Hotkeys

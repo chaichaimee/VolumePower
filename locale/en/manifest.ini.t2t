@@ -1,4 +1,4 @@
-summary = "Volume&Power"
+summary = "VolumePower"
 description = """provides quick control over your computer's NVDA volume and power functions
 Hot Keys:
 NVDA+Shift+PageUp Increase NVDA volume

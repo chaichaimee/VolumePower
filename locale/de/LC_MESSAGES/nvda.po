@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Volume&Power 1.0\n"
+"Project-Id-Version: VolumePower 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-08 07:51+0700\n"
-"PO-Revision-Date: 2026-01-08 07:54+0700\n"
+"PO-Revision-Date: 2026-01-08 12:41+0700\n"
 "Last-Translator: Anonymous <anonymous@example.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -13,8 +13,8 @@ msgstr ""
 "X-Generator: Poedit 3.7\n"
 
 #: __init__.py:41
-msgid "Volume&Power"
-msgstr "Lautstärke&Strom"
+msgid "VolumePower"
+msgstr "LautstärkeStrom"
 
 #: __init__.py:47 __init__.py:67
 msgid "Error: No synthesizer available"

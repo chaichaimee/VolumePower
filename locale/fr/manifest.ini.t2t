@@ -1,4 +1,4 @@
-summary = "Volume & Alimentation"
+summary = "VolumeAlimentation"
 description = """permet un contr?le rapide du volume de NVDA et des fonctions d'alimentation de votre ordinateur
 Raccourcis clavier :
 NVDA+Shift+PageUp    Augmenter le volume de NVDA
