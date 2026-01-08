@@ -7,7 +7,7 @@
 ---
 
 **Author:** chai chaimee  
-**Repository:** https://github.com/chaichaimee/Volume&Power
+**Repository:** https://github.com/chaichaimee/Volume-Power
 
 ---
 
