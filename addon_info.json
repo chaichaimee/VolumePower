@@ -1,10 +1,10 @@
 ﻿{
-  "addon_name": "Volume&Power",
+  "addon_name": "VolumePower",
   "addon_description": "provides quick control over your computer's NVDA volume and power functions",
   "addon_version": "2026.1",
   "addon_author": "chaichaimee",
-  "addon_url": "https://github.com/chaichaimee/Volume-Power",
-  "addon_download_url": "https://github.com/chaichaimee/Volume-Power/releases/download/v2026.1/Volume-Power-v2026.1.nvda-addon",
+  "addon_url": "https://github.com/chaichaimee/VolumePower",
+  "addon_download_url": "https://github.com/chaichaimee/VolumePower/releases/download/v2026.1/VolumePower-v2026.1.nvda-addon",
   "addon_min_nvda_version": "2022.4"
 }
 
