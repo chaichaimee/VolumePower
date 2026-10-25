@@ -1,101 +1,133 @@
-<p align="center">
-  <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" width="140">
-</p>
+![NVDA Logo](https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico)
 
-# <p align="center">VolumePower</p>
+# VolumePower
 
-<br>
+Take command of your sound and your power button, and never lose NVDA's voice again.
 
-<p align="center">Provides quick control over your computer's NVDA volume and power functions</p>
+**author:** chai chaimee
 
-<br>
+**url:** https://github.com/chaichaimee/VolumePower
 
-<p align="center">
-  <b>Author:</b> chai chaimee<br><br>
-  <b>URL:</b> <a href="https://github.com/chaichaimee/VolumePower">https://github.com/chaichaimee/VolumePower</a>
-</p>
+## Introduction
 
----
+VolumePower gives you quick, keyboard-only control over the sound you hear from NVDA and over your computer's power. You can raise or lower NVDA's speech volume, adjust the left and right ear levels independently, and shut down or restart Windows with a single key combination, protected by a short cancellable countdown.
 
-## <p align="center">Introduction</p>
+VolumePower also acts as a guard for your audio setup. When NVDA starts, it can unmute Windows sound, restore a volume that is too low, switch back to the default output device, warn you if a playback device has disappeared, and keep trying to bring your voice synthesizer back if it failed to load. The result is that NVDA stays audible, so you are never left with a silent computer.
 
-<br>
+## Hot Keys
 
-VolumePower is an NVDA add-on that lets you quickly control your computer's volume and power functions, while safeguarding your audio setup so you never lose speech. It is designed to provide seamless management of essential system controls directly from your keyboard.
+**NVDA+Shift+PageUp**
 
-<br>
+- Increase NVDA volume by 5%
 
-## <p align="center">Features</p>
+**NVDA+Shift+PageDown**
 
-<br>
+- Decrease NVDA volume by 5%
 
-* **AudioGuard Protection:** Automatically unmutes Windows and NVDA on startup, protecting against accidental muting of system sounds. It also actively alerts you if a playback device becomes disabled in the Device Manager or if there are sound card issues.
-* **Intelligent Power Control:** Safely manage your system's power states using quick keystrokes. 
-  
-  > **Alt+Windows+S** — Single tap to Shutdown
-  
-  > **Alt+Windows+S** — Double tap to Restart
+**Alt+Windows+S**
 
-* **Safe Cancellations:** Features a newly added 3-second countdown dialog before shutting down or restarting. This provides rising-pitch audio cues and lets you cancel the action instantly by pressing any key. (This feature can be enabled or disabled in the settings).
-* **Quick Volume Adjustments:** Instantly tweak your screen reader's volume without navigating complex menus. NVDA will naturally announce the new volume percentage.
-  
-  > **NVDA+Shift+PageUp** — Increase NVDA volume by 5%
-  
-  > **NVDA+Shift+PageDown** — Decrease NVDA volume by 5%
+- Single Tap : Shutdown computer
+- Double Tap : Restart computer
 
-* **Synthesizer Recovery:** Automatically reinitializes your voice synthesizer driver if it crashes or your audio output device switches unexpectedly.
+**NVDA+Shift+NumPad Plus**
 
-<br>
+- Open the ear volume layer
 
-## <p align="center">Benefits</p>
+**Inside the ear volume layer**
 
-<br>
+- Left Arrow : Select the left ear
+- Right Arrow : Select the right ear
+- Up Arrow : Increase the selected ear by 5
+- Down Arrow : Decrease the selected ear by 5
+- Enter : Make both ears equal
+- Escape : Close the layer
+- Any other key : Close the layer
 
-* **Saves Time and Effort:** Adjust essential volume levels and power settings instantly, reducing keystroke fatigue and bypassing complex Windows menus.
-* **Provides Peace of Mind:** The built-in 3-second countdown prevents accidental system shutdowns, ensuring you never lose unsaved work from an accidental keystroke.
-* **Guarantees Accessibility:** AudioGuard ensures NVDA will always have a voice when your computer starts, fixing accidental mutes or lowered volumes automatically so you are never left in silence.
+## Features
 
-<br>
+### NVDA Volume Control
 
-## <p align="center">Why Use It</p>
+Press **NVDA+Shift+PageUp** or **NVDA+Shift+PageDown** to change the volume of your current voice synthesizer in steps of 5%. The volume stays between 0% and 100%, NVDA announces the new level, for example "55%", and the new level is saved so it is still in effect the next time NVDA starts.
 
-<br>
+### Left and Right Ear Volume
 
-Losing screen reader speech because of an accidental mute or a disabled sound card is incredibly frustrating and can leave you completely locked out of your system. VolumePower solves this core problem by actively protecting your audio routing while giving you fast, safe, and intuitive shortcuts for everyday volume and power management. It turns a potential accessibility crisis into a seamlessly protected experience, making it a must-have tool for every NVDA user.
+This feature lets you set the loudness of the left and right speaker separately. It changes the left and right channel levels of your Windows default playback device, which is useful when one ear needs more volume than the other.
 
-<br>
+**Step by step:**
 
-## <p align="center">Get Started</p>
+1. Press **NVDA+Shift+NumPad Plus**. The layer opens and NVDA announces the left ear level, for example "Left 40".
+2. Press **Left Arrow** or **Right Arrow** to choose the ear. NVDA announces the level of the ear you chose.
+3. Press **Up Arrow** to raise the chosen ear by 5, or **Down Arrow** to lower it by 5. NVDA announces the new level, and adds "maximum" or "minimum" when you reach the end of the range.
+4. Repeat steps 2 and 3 for the other ear if needed.
+5. Press **Enter** to make both ears equal. Both ears are set to the louder of the two levels, and NVDA announces "Both ears" followed by the level.
+6. Press **Escape** to close the layer. NVDA announces "Ear volume closed". Pressing any other key also closes the layer.
 
-<br>
+Each change is accompanied by a short beep that is heard only in the ear you are adjusting. The pitch of the beep rises as the level goes up, so you can judge the level by ear as well as by speech.
 
-Take complete control of your system's audio and power with confidence. Download VolumePower today to experience a faster, safer, and more reliable Windows environment tailored specifically for screen reader users.
+If Windows audio is muted, NVDA announces "Audio is muted". If the output device is not stereo, NVDA announces "The output device is not stereo". If the change cannot be applied, NVDA announces "Failed to change ear volume". In all of these cases the layer closes.
 
-<br>
+### Shutdown and Restart
 
-> **Important Notes:**
-> * Volume adjustments are saved and will persist between NVDA restarts.
-> * The new 3-second countdown and audio guard protections can be customized at any time in the NVDA settings panel under the VolumePower category.
+Press **Alt+Windows+S** once to shut down the computer, or twice to restart it. When the action begins, NVDA announces "Shutdown" or "Restart". Programs that are not responding are closed so the process is not blocked.
 
-<br>
-<br><br>
+If Windows refuses the request, NVDA announces the error and plays a warning beep.
 
-## <p align="center">Support Me</p>
+### Countdown Confirmation Dialog
+
+To protect you from shutting down by accident, a countdown dialog appears before the action is carried out. This is enabled by default and can be turned off in the add-on settings.
+
+**Step by step:**
+
+1. Press **Alt+Windows+S** once for Shutdown or twice for Restart.
+2. A dialog opens and NVDA reads, for example, "Shutdown in 3. Press any key to cancel." A beep plays.
+3. The countdown continues with "2..." and "1...". Each number has its own beep, and the pitch rises as the countdown approaches zero.
+4. If you do nothing, the countdown ends and the computer shuts down or restarts.
+5. To stop it, press any key or close the dialog at any point during the countdown. NVDA announces "Cancelled" and nothing happens.
+
+If the countdown dialog is turned off in the settings, the action is carried out immediately.
+
+### Audio Guard at Startup
+
+Each time NVDA starts, VolumePower checks your sound setup in the background and repairs what it can:
+
+1. It unmutes the default playback device. If the Windows volume is lower than your chosen minimum level, it raises it to your custom volume level.
+2. It unmutes NVDA's own audio session, and raises it in the same way if it is below the minimum level.
+3. If enabled, it unmutes every active playback device, not only the default one.
+4. If enabled, it compares your active playback devices with the ones from your last session. If a device that was working before is now disabled or unavailable, NVDA warns you to check Sound settings and plays a beep.
+5. If enabled, it switches NVDA back to the default audio output device and reloads your synthesizer.
+6. If enabled, it plays a confirmation sound when the audio has been successfully turned on.
+
+### Synthesizer Recovery
+
+If your configured voice synthesizer fails to start with NVDA, VolumePower keeps trying to load it again. The wait between attempts gets longer each time, up to a maximum of 30 seconds, so NVDA stays responsive. You can limit the number of attempts or let it try until it succeeds. When the synthesizer is back, the confirmation sound plays if it is enabled.
+
+### Prevent Windows from Sleeping
+
+When this option is enabled, Windows will not go to sleep automatically while NVDA is running. The setting is released when the add-on is disabled or NVDA exits.
+
+### Add-on Settings
+
+Open the NVDA Settings dialog and choose the **VolumePower** category. The following options are available:
+
+1. **Show countdown confirmation dialog before shutdown or restart** : on by default.
+2. **Set custom volume level** : the volume used when Windows sound is found to be too low. The default is 20.
+3. **Increase the volume if it is lower than** : the minimum level that triggers the volume restore. The default is 5.
+4. **Repeat attempts to initialize the voice synthesizer driver** : on by default.
+5. **Number of retries (0 - infinitely)** : shown only when the option above is checked. The default is 0, which means keep trying until it succeeds.
+6. **Switch to the default audio output device** : on by default.
+7. **Play sound when audio has been successfully turned on** : on by default.
+8. **Unmute all playback devices, not only the default one** : on by default.
+9. **Alert me if a playback device becomes disabled or unavailable** : on by default.
+10. **Prevent Windows from going to sleep automatically** : off by default.
+
+Your settings are saved when you press OK.
+
+## Support Me
 
 If this tool has made your life easier, consider fueling the next update with a small donation.
 
-<br>
+[![Support me](https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe)](https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01)
 
-<p align="center">
-  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
-    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Support me">
-  </a>
-</p>
+Your support means the world. Let's build something great together
 
-<br>
-
-<p align="center">Your support means the world. Let's build something great together</p>
-
-<br>
-
-<p align="center">&copy; 2026 Chai Chaimee NVDA Add-on Released under GPL</p>
+© 2026 Chai Chaimee NVDA Add-on Released under GNU GPL

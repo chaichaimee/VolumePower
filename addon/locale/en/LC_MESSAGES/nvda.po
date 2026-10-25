@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.9.1\n"
+"Project-Id-Version: VolumePower 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-02 12:34+0700\n"
+"POT-Creation-Date: 2026-10-25 18:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: English\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: settings.py:84
 msgid "&Alert me if a playback device becomes disabled or unavailable"
@@ -32,7 +32,15 @@ msgstr "&Repeat attempts to initialize the voice synthesizer driver"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "&Unmute all playback devices, not only the default one"
 
-#: plugin.py:123
+#: addonCore.py:174
+msgid "Audio is muted"
+msgstr "Audio is muted"
+
+#: addonCore.py:181
+msgid "Both ears {level}"
+msgstr "Both ears {level}"
+
+#: addonCore.py:232
 msgid "Cancelled"
 msgstr "Cancelled"
 
@@ -40,15 +48,19 @@ msgstr "Cancelled"
 msgid "Cannot get shutdown privilege"
 msgstr "Cannot get shutdown privilege"
 
-#: plugin.py:68
+#: addonCore.py:86
 msgid "Decrease NVDA volume 5%"
 msgstr "Decrease NVDA volume 5%"
 
-#: plugin.py:86
+#: addonCore.py:145
+msgid "Ear volume closed"
+msgstr "Ear volume closed"
+
+#: addonCore.py:104
 msgid "Error: Failed to change NVDA volume"
 msgstr "Error: Failed to change NVDA volume"
 
-#: plugin.py:76
+#: addonCore.py:94
 msgid "Error: No synthesizer available"
 msgstr "Error: No synthesizer available"
 
@@ -56,7 +68,11 @@ msgstr "Error: No synthesizer available"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx failed with error {error}"
 
-#: plugin.py:61
+#: addonCore.py:178
+msgid "Failed to change ear volume"
+msgstr "Failed to change ear volume"
+
+#: addonCore.py:79
 msgid "Increase NVDA volume 5%"
 msgstr "Increase NVDA volume 5%"
 
@@ -64,14 +80,26 @@ msgstr "Increase NVDA volume 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Increase the volume if it is &lower than:"
 
+#: addonCore.py:186
+msgid "Left"
+msgstr "Left"
+
+#: addonCore.py:119
+msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
+msgstr "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
+
 #: settings.py:74
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Play &sound when audio has been successfully turned on"
 
-#: plugin.py:118
-#: plugin.py:128
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Restart"
 msgstr "Restart"
+
+#: addonCore.py:186
+msgid "Right"
+msgstr "Right"
 
 #: settings.py:38
 msgid "Select the initial sound system settings that will be set when NVDA starts:"
@@ -85,18 +113,22 @@ msgstr "Set &custom volume level:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Show countdown &confirmation dialog before shutdown or restart"
 
-#: plugin.py:101
+#: addonCore.py:210
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Shut down the system (single tap) or restart it (double tap)"
 
-#: plugin.py:118
-#: plugin.py:128
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Shutdown"
 msgstr "Shutdown"
 
 #: settings.py:69
 msgid "Switch to the default audio output &device"
 msgstr "Switch to the default audio output &device"
+
+#: addonCore.py:176
+msgid "The output device is not stereo"
+msgstr "The output device is not stereo"
 
 #: audioGuard.py:306
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
@@ -106,10 +138,22 @@ msgstr "Warning: a sound device that was previously enabled is now unavailable o
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} in {seconds}. Press any key to cancel."
 
+#: addonCore.py:192
+msgid "{ear} {level}"
+msgstr "{ear} {level}"
+
+#: addonCore.py:188
+msgid "{ear} {level}, maximum"
+msgstr "{ear} {level}, maximum"
+
+#: addonCore.py:190
+msgid "{ear} {level}, minimum"
+msgstr "{ear} {level}, minimum"
+
 #: countdownDialog.py:63
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: plugin.py:83
+#: addonCore.py:101
 msgid "{volume}%"
 msgstr "{volume}%"

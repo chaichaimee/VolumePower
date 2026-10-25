@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.9.0\n"
+"Project-Id-Version: VolumePower 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-08-29 15:32+0700\n"
-"PO-Revision-Date: 2026-08-29 15:32+0700\n"
+"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: settings.py:84
 msgid "&Alert me if a playback device becomes disabled or unavailable"
@@ -32,7 +32,15 @@ msgstr "พยายามเริ่มทำงานไดรเวอร์
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "เปิดเสียงอุปกรณ์เล่นเสียงทั้งหมด ไม่ใช่แค่อุปกรณ์เริ่มต้น (&U)"
 
-#: plugin.py:118
+#: addonCore.py:174
+msgid "Audio is muted"
+msgstr "เสียงถูกปิดใช้งาน"
+
+#: addonCore.py:181
+msgid "Both ears {level}"
+msgstr "ทั้งสองข้าง {level}"
+
+#: addonCore.py:232
 msgid "Cancelled"
 msgstr "ยกเลิกแล้ว"
 
@@ -40,15 +48,19 @@ msgstr "ยกเลิกแล้ว"
 msgid "Cannot get shutdown privilege"
 msgstr "ไม่ได้รับสิทธิ์ในการปิดเครื่อง"
 
-#: plugin.py:63
+#: addonCore.py:86
 msgid "Decrease NVDA volume 5%"
 msgstr "ลดระดับเสียง NVDA 5%"
 
-#: plugin.py:81
+#: addonCore.py:145
+msgid "Ear volume closed"
+msgstr "ปิดเสียงหูข้างนี้"
+
+#: addonCore.py:104
 msgid "Error: Failed to change NVDA volume"
 msgstr "ข้อผิดพลาด: เปลี่ยนระดับเสียง NVDA ไม่สำเร็จ"
 
-#: plugin.py:71
+#: addonCore.py:94
 msgid "Error: No synthesizer available"
 msgstr "ข้อผิดพลาด: ไม่มีโปรแกรมสังเคราะห์เสียงที่พร้อมใช้งาน"
 
@@ -56,7 +68,11 @@ msgstr "ข้อผิดพลาด: ไม่มีโปรแกรมส�
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx ล้มเหลวด้วยข้อผิดพลาด {error}"
 
-#: plugin.py:56
+#: addonCore.py:178
+msgid "Failed to change ear volume"
+msgstr "ไม่สามารถเปลี่ยนระดับเสียงของหูได้"
+
+#: addonCore.py:79
 msgid "Increase NVDA volume 5%"
 msgstr "เพิ่มระดับเสียง NVDA 5%"
 
@@ -64,14 +80,26 @@ msgstr "เพิ่มระดับเสียง NVDA 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "เพิ่มระดับเสียงหากต่ำกว่า (&L):"
 
+#: addonCore.py:186
+msgid "Left"
+msgstr "ซ้าย"
+
+#: addonCore.py:119
+msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
+msgstr "เปิดเลเยอร์ระดับเสียงและประกาศหูที่เลือก: ลูกศรซ้ายและขวาเลือกหู ลูกศรขึ้นและลงปรับระดับทีละ 5 Enter ทำให้เสียงทั้งสองข้างเท่ากัน Escape ปิด ปุ่มอื่นๆ ทั้งหมดก็จะปิดเลเยอร์เช่นกัน"
+
 #: settings.py:74
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "เล่นเสียงเมื่อเปิดระบบเสียงสำเร็จแล้ว (&S)"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Restart"
 msgstr "รีสตาร์ต"
+
+#: addonCore.py:186
+msgid "Right"
+msgstr "ขวา"
 
 #: settings.py:38
 msgid "Select the initial sound system settings that will be set when NVDA starts:"
@@ -85,12 +113,12 @@ msgstr "กำหนดระดับเสียงที่ต้องกา
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "แสดงกล่องข้อความยืนยันนับถอยหลังก่อนปิดเครื่องหรือรีสตาร์ต (&C)"
 
-#: plugin.py:96
+#: addonCore.py:210
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "ปิดระบบ (กดหนึ่งครั้ง) หรือรีสตาร์ตระบบ (กดสองครั้ง)"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Shutdown"
 msgstr "ปิดเครื่อง"
 
@@ -98,7 +126,11 @@ msgstr "ปิดเครื่อง"
 msgid "Switch to the default audio output &device"
 msgstr "สลับไปใช้อุปกรณ์ส่งออกเสียงเริ่มต้น (&D)"
 
-#: audioGuard.py:301
+#: addonCore.py:176
+msgid "The output device is not stereo"
+msgstr "อุปกรณ์ส่งออกไม่ใช่เสียงสเตอริโอ"
+
+#: audioGuard.py:306
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "คำเตือน: อุปกรณ์เสียงที่เคยเปิดใช้งานก่อนหน้านี้ไม่พร้อมใช้งานหรือถูกปิดใช้งานอยู่ โปรดตรวจสอบการตั้งค่าเสียง"
 
@@ -106,10 +138,22 @@ msgstr "คำเตือน: อุปกรณ์เสียงที่เ�
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "จะ{action}ในอีก {seconds} วินาที กดคีย์ใดก็ได้เพื่อยกเลิก"
 
+#: addonCore.py:192
+msgid "{ear} {level}"
+msgstr "{ear} {level}"
+
+#: addonCore.py:188
+msgid "{ear} {level}, maximum"
+msgstr "{ear} {level}, สูงสุด"
+
+#: addonCore.py:190
+msgid "{ear} {level}, minimum"
+msgstr "{ear} {level}, ต่ำสุด"
+
 #: countdownDialog.py:63
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: plugin.py:78
+#: addonCore.py:101
 msgid "{volume}%"
 msgstr "{volume}%"

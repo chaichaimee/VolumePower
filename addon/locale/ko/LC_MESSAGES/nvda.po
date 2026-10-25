@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.9.0\n"
+"Project-Id-Version: VolumePower 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-08-29 15:32+0700\n"
-"PO-Revision-Date: 2026-08-29 15:32+0700\n"
+"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: settings.py:84
 msgid "&Alert me if a playback device becomes disabled or unavailable"
@@ -32,7 +32,15 @@ msgstr "음성 합성기 드라이버 초기화 재시도(&R)"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "기본 장치뿐만 아니라 모든 재생 장치 음소거 해제(&U)"
 
-#: plugin.py:118
+#: addonCore.py:174
+msgid "Audio is muted"
+msgstr "오디오가 음소거됨"
+
+#: addonCore.py:181
+msgid "Both ears {level}"
+msgstr "양쪽 귀 {level}"
+
+#: addonCore.py:232
 msgid "Cancelled"
 msgstr "취소됨"
 
@@ -40,15 +48,19 @@ msgstr "취소됨"
 msgid "Cannot get shutdown privilege"
 msgstr "시스템 종료 권한을 얻을 수 없습니다"
 
-#: plugin.py:63
+#: addonCore.py:86
 msgid "Decrease NVDA volume 5%"
 msgstr "NVDA 음량 5% 낮추기"
 
-#: plugin.py:81
+#: addonCore.py:145
+msgid "Ear volume closed"
+msgstr "귀 볼륨 닫힘"
+
+#: addonCore.py:104
 msgid "Error: Failed to change NVDA volume"
 msgstr "오류: NVDA 음량을 변경하지 못했습니다"
 
-#: plugin.py:71
+#: addonCore.py:94
 msgid "Error: No synthesizer available"
 msgstr "오류: 사용할 수 있는 음성 합성기가 없습니다"
 
@@ -56,7 +68,11 @@ msgstr "오류: 사용할 수 있는 음성 합성기가 없습니다"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "오류 {error}(으)로 인해 ExitWindowsEx 실행에 실패했습니다"
 
-#: plugin.py:56
+#: addonCore.py:178
+msgid "Failed to change ear volume"
+msgstr "귀 볼륨을 변경하지 못했습니다"
+
+#: addonCore.py:79
 msgid "Increase NVDA volume 5%"
 msgstr "NVDA 음량 5% 높이기"
 
@@ -64,14 +80,26 @@ msgstr "NVDA 음량 5% 높이기"
 msgid "Increase the volume if it is &lower than:"
 msgstr "음량이 다음보다 낮으면 높이기(&L):"
 
+#: addonCore.py:186
+msgid "Left"
+msgstr "왼쪽"
+
+#: addonCore.py:119
+msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
+msgstr "귀 볼륨 레이어를 열고 선택한 귀를 알립니다: 좌우 화살표로 귀를 선택하고, 위아래 화살표로 5씩 조절하며, 엔터키로 양쪽 귀를 같게 만들고, 이스케이프 키로 닫습니다. 다른 모든 키를 눌러도 레이어가 닫힙니다"
+
 #: settings.py:74
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "오디오가 성공적으로 켜지면 소리 재생(&S)"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Restart"
 msgstr "다시 시작"
+
+#: addonCore.py:186
+msgid "Right"
+msgstr "오른쪽"
 
 #: settings.py:38
 msgid "Select the initial sound system settings that will be set when NVDA starts:"
@@ -85,12 +113,12 @@ msgstr "사용자 지정 음량 수준 설정(&C):"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "시스템 종료 또는 다시 시작 전 카운트다운 확인 대화상자 표시(&C)"
 
-#: plugin.py:96
+#: addonCore.py:210
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "시스템 종료(한 번 누름) 또는 다시 시작(두 번 누름)"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Shutdown"
 msgstr "시스템 종료"
 
@@ -98,7 +126,11 @@ msgstr "시스템 종료"
 msgid "Switch to the default audio output &device"
 msgstr "기본 오디오 출력 장치로 전환(&D)"
 
-#: audioGuard.py:301
+#: addonCore.py:176
+msgid "The output device is not stereo"
+msgstr "출력 장치가 스테레오가 아닙니다"
+
+#: audioGuard.py:306
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "경고: 이전에 활성화된 사운드 장치를 사용할 수 없거나 비활성화되었습니다. 사운드 설정을 확인하십시오."
 
@@ -106,10 +138,22 @@ msgstr "경고: 이전에 활성화된 사운드 장치를 사용할 수 없거�
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{seconds}초 후 {action}합니다. 취소하려면 아무 키나 누르십시오."
 
+#: addonCore.py:192
+msgid "{ear} {level}"
+msgstr "{ear} {level}"
+
+#: addonCore.py:188
+msgid "{ear} {level}, maximum"
+msgstr "{ear} {level}, 최대"
+
+#: addonCore.py:190
+msgid "{ear} {level}, minimum"
+msgstr "{ear} {level}, 최소"
+
 #: countdownDialog.py:63
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: plugin.py:78
+#: addonCore.py:101
 msgid "{volume}%"
 msgstr "{volume}%"

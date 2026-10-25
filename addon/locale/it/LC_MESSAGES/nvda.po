@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.9.0\n"
+"Project-Id-Version: VolumePower 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-08-29 15:32+0700\n"
-"PO-Revision-Date: 2026-08-29 15:32+0700\n"
+"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: settings.py:84
 msgid "&Alert me if a playback device becomes disabled or unavailable"
@@ -32,7 +32,15 @@ msgstr "&Ripeti i tentativi di inizializzazione del driver della sintesi vocale"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "Riavvia l'audio di &tutti i dispositivi di riproduzione, non solo quello predefinito"
 
-#: plugin.py:118
+#: addonCore.py:174
+msgid "Audio is muted"
+msgstr "Zvučni je zapis utišan"
+
+#: addonCore.py:181
+msgid "Both ears {level}"
+msgstr "Obu uha {level}"
+
+#: addonCore.py:232
 msgid "Cancelled"
 msgstr "Annullato"
 
@@ -40,15 +48,19 @@ msgstr "Annullato"
 msgid "Cannot get shutdown privilege"
 msgstr "Impossibile ottenere i privilegi di spegnimento"
 
-#: plugin.py:63
+#: addonCore.py:86
 msgid "Decrease NVDA volume 5%"
 msgstr "Riduci il volume di NVDA del 5%"
 
-#: plugin.py:81
+#: addonCore.py:145
+msgid "Ear volume closed"
+msgstr "Glasnoća uha isključena"
+
+#: addonCore.py:104
 msgid "Error: Failed to change NVDA volume"
 msgstr "Errore: impossibile modificare il volume di NVDA"
 
-#: plugin.py:71
+#: addonCore.py:94
 msgid "Error: No synthesizer available"
 msgstr "Errore: nessuna sintesi vocale disponibile"
 
@@ -56,7 +68,11 @@ msgstr "Errore: nessuna sintesi vocale disponibile"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx non riuscito con l'errore {error}"
 
-#: plugin.py:56
+#: addonCore.py:178
+msgid "Failed to change ear volume"
+msgstr "Nije uspjelo mijenjanje glasnoće uha"
+
+#: addonCore.py:79
 msgid "Increase NVDA volume 5%"
 msgstr "Aumenta il volume di NVDA del 5%"
 
@@ -64,14 +80,26 @@ msgstr "Aumenta il volume di NVDA del 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Aumenta il volume se è &inferiore a:"
 
+#: addonCore.py:186
+msgid "Left"
+msgstr "Sinistra"
+
+#: addonCore.py:119
+msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
+msgstr "Otvori sloj glasnoće uha i izreči odabrano uho: lijeva i desna strelica biraju uho, strelice gore i dolje mijenjaju ga za 5, Enter izjednačava oba uha, Escape zatvara. Bilo koja druga tipka također zatvara sloj"
+
 #: settings.py:74
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Riproduci un &suono quando l'audio è stato attivato con successo"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Restart"
 msgstr "Riavvia"
+
+#: addonCore.py:186
+msgid "Right"
+msgstr "Destra"
 
 #: settings.py:38
 msgid "Select the initial sound system settings that will be set when NVDA starts:"
@@ -85,12 +113,12 @@ msgstr "Imposta un livello di volume &personalizzato:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Mostra la finestra di &conferma con conto alla rovescia prima dello spegnimento o riavvio"
 
-#: plugin.py:96
+#: addonCore.py:210
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Spegni il sistema (singola pressione) o riavvialo (doppia pressione)"
 
-#: plugin.py:113
-#: plugin.py:123
+#: addonCore.py:227
+#: addonCore.py:237
 msgid "Shutdown"
 msgstr "Spegni"
 
@@ -98,7 +126,11 @@ msgstr "Spegni"
 msgid "Switch to the default audio output &device"
 msgstr "Passa al &dispositivo di uscita audio predefinito"
 
-#: audioGuard.py:301
+#: addonCore.py:176
+msgid "The output device is not stereo"
+msgstr "Izlazni uređaj nije stereo"
+
+#: audioGuard.py:306
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Attenzione: un dispositivo audio precedentemente abilitato non è disponibile o è disabilitato. Controlla le impostazioni audio."
 
@@ -106,10 +138,23 @@ msgstr "Attenzione: un dispositivo audio precedentemente abilitato non è dispon
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} in {seconds}. Premi un tasto qualsiasi per annullare."
 
+#: addonCore.py:192
+msgid "{ear} {level}"
+msgstr "{ear} {level}"
+
+#: addonCore.py:188
+msgid "{ear} {level}, maximum"
+msgstr "{ear} {level}, maksimum"
+
+#: addonCore.py:190
+# keep-identical
+msgid "{ear} {level}, minimum"
+msgstr "{ear} {level}, minimum"
+
 #: countdownDialog.py:63
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: plugin.py:78
+#: addonCore.py:101
 msgid "{volume}%"
 msgstr "{volume}%"

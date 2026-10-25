@@ -10,4 +10,4 @@ try:
 except addonHandler.AddonError:
 	log.warning("Unable to init translations. This may be because the addon is running from NVDA scratchpad.")
 
-from .plugin import GlobalPlugin  # noqa: E402, F401
+from .addonCore import GlobalPlugin  # noqa: E402, F401
