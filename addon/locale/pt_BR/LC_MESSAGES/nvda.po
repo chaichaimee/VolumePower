@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.0\n"
+"Project-Id-Version: VolumePower 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"POT-Creation-Date: 2026-10-30 06:39+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Portuguese (Brazil)\n"
@@ -93,7 +93,7 @@ msgid "Play &sound when audio has been successfully turned on"
 msgstr "Tocar &som quando o áudio for ativado com sucesso"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Restart"
 msgstr "Reiniciar"
 
@@ -118,7 +118,7 @@ msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Desligar o sistema (toque simples) ou reiniciar (toque duplo)"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Shutdown"
 msgstr "Desligar"
 
@@ -134,7 +134,7 @@ msgstr "O dispositivo de saída não é estéreo"
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Aviso: um dispositivo de som ativado anteriormente está indisponível ou desativado. Verifique as configurações de som."
 
-#: countdownDialog.py:42
+#: countdownDialog.py:49
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} em {seconds}. Pressione qualquer tecla para cancelar."
 
@@ -150,7 +150,7 @@ msgstr "{ear} {level}, máximo"
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}, mínimo"
 
-#: countdownDialog.py:63
+#: countdownDialog.py:79
 msgid "{seconds}..."
 msgstr "{seconds}..."
 

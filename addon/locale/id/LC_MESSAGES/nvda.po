@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.0\n"
+"Project-Id-Version: VolumePower 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"POT-Creation-Date: 2026-10-30 06:39+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Indonesian\n"
@@ -93,7 +93,7 @@ msgid "Play &sound when audio has been successfully turned on"
 msgstr "Putar &suara saat audio berhasil diaktifkan"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Restart"
 msgstr "Mulai Ulang"
 
@@ -118,7 +118,7 @@ msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Matikan sistem (tekan sekali) atau mulai ulang (tekan dua kali)"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Shutdown"
 msgstr "Matikan"
 
@@ -134,7 +134,7 @@ msgstr "Perangkat keluaran bukan stereo"
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Peringatan: perangkat suara yang sebelumnya diaktifkan sekarang tidak tersedia atau dinonaktifkan. Silakan periksa pengaturan Suara."
 
-#: countdownDialog.py:42
+#: countdownDialog.py:49
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} dalam {seconds}. Tekan tombol apa saja untuk membatalkan."
 
@@ -151,7 +151,7 @@ msgstr "{ear} {level}, maksimum"
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}, minimum"
 
-#: countdownDialog.py:63
+#: countdownDialog.py:79
 msgid "{seconds}..."
 msgstr "{seconds}..."
 

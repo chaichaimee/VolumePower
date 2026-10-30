@@ -5,17 +5,22 @@ from typing import Callable, Optional
 import gui
 import tones
 import wx
+from logHandler import log
 
 _: Callable[[str], str]
 
 COUNTDOWN_START_SECONDS = 3
-COUNTDOWN_BEEP_FREQUENCIES = {3: 300, 2: 500, 1: 800}
-COUNTDOWN_BEEP_DURATION_MS = 150
+COUNTDOWN_TICK_MS = 1000
+COUNTDOWN_BEEP_DURATION_MS = 80
+COUNTDOWN_BEEP_FREQUENCIES = {3: 520, 2: 400, 1: 300}
+# Fractions of the custom volume level from the add-on settings: the first beep plays at that
+# level and the next two step down. NVDA's own sound volume is still applied on top by its tones player.
+COUNTDOWN_BEEP_VOLUME_RATIOS = {3: 1.0, 2: 0.55, 1: 0.33}
 
 
 class PowerCountdownDialog(wx.Dialog):
-	"""Non-modal confirmation dialog that counts down 3-2-1 with rising-pitch beeps
-	before a shutdown or restart, cancellable at any point with Enter or Escape.
+	"""Non-modal confirmation dialog that counts down 3-2-1 with one beep per second that falls in pitch and volume
+	before a shutdown or restart, cancellable at any point with any key.
 	"""
 
 	def __init__(
@@ -24,6 +29,7 @@ class PowerCountdownDialog(wx.Dialog):
 		actionLabel: str,
 		onConfirm: Callable[[], None],
 		onCancel: Optional[Callable[[], None]] = None,
+		baseVolume: int = 20,
 	) -> None:
 		super().__init__(parent, title=actionLabel, style=wx.DEFAULT_DIALOG_STYLE)
 		# Without this, Windows' foreground-lock heuristics keep whatever app was
@@ -33,6 +39,7 @@ class PowerCountdownDialog(wx.Dialog):
 		gui.mainFrame.prePopup()
 		self._onConfirm = onConfirm
 		self._onCancel = onCancel
+		self._baseVolume = max(0, min(100, int(baseVolume)))
 		self._remainingSeconds = COUNTDOWN_START_SECONDS
 		self._isResolved = False
 
@@ -52,8 +59,17 @@ class PowerCountdownDialog(wx.Dialog):
 
 		self._countdownTimer = wx.Timer(self)
 		self.Bind(wx.EVT_TIMER, self._onTimerTick, self._countdownTimer)
-		self._countdownTimer.Start(1000)
-		tones.beep(COUNTDOWN_BEEP_FREQUENCIES[self._remainingSeconds], COUNTDOWN_BEEP_DURATION_MS)
+		self._countdownTimer.Start(COUNTDOWN_TICK_MS)
+		self._playCountdownBeep()
+
+	def _playCountdownBeep(self) -> None:
+		secondsKey = min(max(self._remainingSeconds, 1), COUNTDOWN_START_SECONDS)
+		frequency = COUNTDOWN_BEEP_FREQUENCIES[secondsKey]
+		volume = int(round(self._baseVolume * COUNTDOWN_BEEP_VOLUME_RATIOS[secondsKey]))
+		if self._baseVolume > 0:
+			volume = max(1, volume)
+		log.debug("VolumePower countdown beep: %d Hz, relative volume %d", frequency, volume)
+		tones.beep(frequency, COUNTDOWN_BEEP_DURATION_MS, volume, volume)
 
 	def _onTimerTick(self, event: wx.TimerEvent) -> None:
 		self._remainingSeconds -= 1
@@ -61,8 +77,7 @@ class PowerCountdownDialog(wx.Dialog):
 			self._resolve(confirmed=True)
 			return
 		self._messageText.SetLabel(_("{seconds}...").format(seconds=self._remainingSeconds))
-		frequency = COUNTDOWN_BEEP_FREQUENCIES.get(self._remainingSeconds, 800)
-		tones.beep(frequency, COUNTDOWN_BEEP_DURATION_MS)
+		self._playCountdownBeep()
 
 	def _onCharHook(self, event: wx.KeyEvent) -> None:
 		self._resolve(confirmed=False)

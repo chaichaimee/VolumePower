@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.0\n"
+"Project-Id-Version: VolumePower 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-25 18:43+0700\n"
+"POT-Creation-Date: 2026-10-30 06:39+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Traditional)\n"
@@ -93,7 +93,7 @@ msgid "Play &sound when audio has been successfully turned on"
 msgstr "成功開啟音訊時播放音效(&S)"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Restart"
 msgstr "重新啟動"
 
@@ -118,7 +118,7 @@ msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "關閉系統（按一下）或重新啟動（按兩下）"
 
 #: addonCore.py:227
-#: addonCore.py:237
+#: addonCore.py:238
 msgid "Shutdown"
 msgstr "關機"
 
@@ -134,7 +134,7 @@ msgstr "輸出裝置不是立體聲"
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "警告：先前啟用的音訊裝置現已不可用或已停用。請檢查聲音設定。"
 
-#: countdownDialog.py:42
+#: countdownDialog.py:49
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "將在 {seconds} 秒內{action}。按任意鍵取消。"
 
@@ -150,7 +150,7 @@ msgstr "{ear} {level}，最大值"
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}，最小值"
 
-#: countdownDialog.py:63
+#: countdownDialog.py:79
 msgid "{seconds}..."
 msgstr "{seconds}..."
 

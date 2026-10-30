@@ -230,6 +230,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			actionLabel=actionLabel,
 			onConfirm=lambda: self._executeShutdown(reboot),
 			onCancel=lambda: ui.message(_("Cancelled")),
+			baseVolume=self._audioGuardEngine.settings["volume"],
 		).Show()
 
 	def _executeShutdown(self, reboot: bool) -> None:
