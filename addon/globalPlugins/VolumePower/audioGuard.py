@@ -1,9 +1,12 @@
 # audioGuard.py
 
 import ctypes
+import gc
 import json
 import os
+import shutil
 import threading
+import wave
 from ctypes import POINTER, cast
 from typing import Any, Callable, Dict, List, Optional, Set
 
@@ -50,9 +53,28 @@ def getSettingsFilePath() -> str:
 	@return: absolute file path
 	@rtype: str
 	"""
-	settingsDir = os.path.join(globalVars.appArgs.configPath, "ChaiChaimee")
+	settingsDir = os.path.join(globalVars.appArgs.configPath, "ChaiChaimee", ADDON_NAME)
 	os.makedirs(settingsDir, exist_ok=True)
 	return os.path.join(settingsDir, f"{ADDON_NAME}_audioGuard.json")
+
+
+def migrateLegacySettingsFile() -> None:
+	"""Move the audio guard JSON from the old shared ChaiChaimee folder into the per-add-on folder.
+
+	A fresh installation has no legacy file, so nothing happens. On update the legacy file is moved,
+	or deleted when the new location already holds a settings file, so only one copy remains.
+	"""
+	legacyPath = os.path.join(globalVars.appArgs.configPath, "ChaiChaimee", f"{ADDON_NAME}_audioGuard.json")
+	if not os.path.isfile(legacyPath):
+		return
+	newPath = getSettingsFilePath()
+	try:
+		if os.path.isfile(newPath):
+			os.remove(legacyPath)
+		else:
+			shutil.move(legacyPath, newPath)
+	except OSError as migrationError:
+		log.warning("Could not move audio guard settings to %s: %s", newPath, str(migrationError))
 
 
 class AudioGuardEngine:
@@ -64,6 +86,7 @@ class AudioGuardEngine:
 		self.settings: Dict[str, Any] = dict(DEFAULT_SETTINGS)
 		self._knownActiveDeviceIds: List[str] = []
 		self._lock = threading.Lock()
+		migrateLegacySettingsFile()
 		self.loadSettings()
 		self._sleepPrevented = False
 		self._synthResetAttempts = 0
@@ -154,6 +177,7 @@ class AudioGuardEngine:
 		avoid a deadlock.
 		"""
 		CoInitialize()
+		log.info("VolumePower: startup checks started")
 		try:
 			volumeStateChanged = self.unmuteAudio()
 			if self.unmuteNvdaProcess():
@@ -172,7 +196,11 @@ class AudioGuardEngine:
 			elif volumeStateChanged and self.settings["playsound"]:
 				wx.CallAfter(self.playConfirmationSound)
 		finally:
+			# Cyclic garbage can still hold a COM pointer; collect it here, before this thread's
+			# apartment is torn down, instead of on whichever thread runs the collector later.
+			gc.collect()
 			CoUninitialize()
+			log.info("VolumePower: startup checks finished")
 
 	def _finishStartupOnMainThread(self, volumeStateChanged: bool) -> None:
 		"""Switch to the default output device, then fire the single confirmation sound for this startup.
@@ -184,9 +212,11 @@ class AudioGuardEngine:
 		@param volumeStateChanged: whether unmuteAudio or unmuteNvdaProcess changed anything
 		@type volumeStateChanged: bool
 		"""
+		log.info("VolumePower: finishing startup on main thread")
 		deviceSwitched = self.switchToDefaultOutputDevice()
 		if (volumeStateChanged or deviceSwitched) and self.settings["playsound"]:
 			self.playConfirmationSound()
+		log.info("VolumePower: startup finished (volumeChanged=%s, deviceSwitched=%s)", volumeStateChanged, deviceSwitched)
 
 	def unmuteAudio(self) -> bool:
 		"""Turn on Windows sound if it is muted or too low on the default playback device.
@@ -217,32 +247,36 @@ class AudioGuardEngine:
 			return False
 
 	def unmuteNvdaProcess(self) -> bool:
-		"""Turn on the NVDA process audio session if it is muted or too low.
+		"""Turn on every NVDA process audio session that is muted or too low.
 
-		Wrapped in a broad try/except since pycaw/comtypes can raise a COMError or
-		OSError if the Windows Audio service is restarting or an audio session becomes
-		invalid mid-enumeration; this must fail gracefully so runStartupChecks can
-		continue with the remaining startup tasks on the background thread.
+		NVDA can hold more than one audio session, so the scan does not stop at the first match.
+		Each session is handled in its own try/except, since a session can become invalid or its
+		process can exit mid-enumeration; one bad session must not skip the remaining ones, and
+		the whole routine must fail gracefully so runStartupChecks can continue on the background thread.
 
-		@return: True if the mute or volume state was changed
+		@return: True if the mute or volume state of any session was changed
 		@rtype: bool
 		"""
 		try:
-			for session in AudioUtilities.GetAllSessions():
-				if session.Process and session.Process.name().lower() == "nvda.exe":
-					sessionVolume: ISimpleAudioVolume = session.SimpleAudioVolume
-					volumeStateChanged = False
-					if sessionVolume.GetMute():
-						sessionVolume.SetMute(False, None)
-						volumeStateChanged = True
-					if sessionVolume.GetMasterVolume() * 100.0 < self.settings["minlevel"]:
-						sessionVolume.SetMasterVolume(float(self.settings["volume"]) / 100.0, None)
-						volumeStateChanged = True
-					return volumeStateChanged
+			sessions = AudioUtilities.GetAllSessions()
+		except Exception as enumerationError:
+			log.debug("Failed to enumerate audio sessions: %s", str(enumerationError))
 			return False
-		except Exception as unmuteError:
-			log.debug("Failed to unmute NVDA process audio session: %s", str(unmuteError))
-			return False
+		volumeStateChanged = False
+		for session in sessions:
+			try:
+				if not session.Process or session.Process.name().lower() != "nvda.exe":
+					continue
+				sessionVolume: ISimpleAudioVolume = session.SimpleAudioVolume
+				if sessionVolume.GetMute():
+					sessionVolume.SetMute(False, None)
+					volumeStateChanged = True
+				if sessionVolume.GetMasterVolume() * 100.0 < self.settings["minlevel"]:
+					sessionVolume.SetMasterVolume(float(self.settings["volume"]) / 100.0, None)
+					volumeStateChanged = True
+			except Exception as sessionError:
+				log.debug("Failed to unmute an NVDA audio session: %s", str(sessionError))
+		return volumeStateChanged
 
 	def restoreAllDeviceVolumes(self) -> None:
 		"""Unmute every active playback device, not only the current default one.
@@ -378,10 +412,11 @@ class AudioGuardEngine:
 		@return: True if the synth driver was successfully reloaded onto the default device
 		@rtype: bool
 		"""
-		targetDevice = ""
-		if config.conf["audio"]["outputDevice"] == targetDevice:
+		defaultDeviceKey = str(config.conf.getConfigValidation(("audio", "outputDevice")).default)
+		# NVDA stores the default device under its own default key; an empty value is the same device.
+		if config.conf["audio"]["outputDevice"] in ("", defaultDeviceKey):
 			return False
-		config.conf["audio"]["outputDevice"] = targetDevice
+		config.conf["audio"]["outputDevice"] = defaultDeviceKey
 		currentSynth = synthDriverHandler.getSynth()
 		if not currentSynth:
 			return False
@@ -403,10 +438,12 @@ class AudioGuardEngine:
 		from the background startup thread (a separate STA) breaks COM marshaling and can
 		raise RPC_E_WRONG_THREAD or corrupt the audio buffer pipeline.
 		"""
+		soundPath = os.path.join(os.path.dirname(__file__), "unmuted.wav")
 		try:
-			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "unmuted.wav"), asynchronous=True)
-		except OSError as playbackError:
+			nvwave.playWaveFile(soundPath, asynchronous=True)
+		except (OSError, EOFError, wave.Error) as playbackError:
 			log.debug("Failed to play audio guard confirmation sound: %s", str(playbackError))
+			tones.beep(880, 120)
 
 	def applySleepPrevention(self) -> None:
 		"""Apply or release the Windows automatic-sleep prevention flag based on the current setting."""

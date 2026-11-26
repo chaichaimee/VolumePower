@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Russian\n"
@@ -32,15 +32,15 @@ msgstr "&Повторять попытки инициализации драйв
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "Включить звук для &всех устройств воспроизведения, а не только по умолчанию"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "Звук выключен"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "Оба уха: {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "Отменено"
 
@@ -48,19 +48,19 @@ msgstr "Отменено"
 msgid "Cannot get shutdown privilege"
 msgstr "Не удалось получить привилегию завершения работы"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "Уменьшить громкость NVDA на 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "Громкость уха выключена"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "Ошибка: не удалось изменить громкость NVDA"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "Ошибка: нет доступного синтезатора"
 
@@ -68,11 +68,11 @@ msgstr "Ошибка: нет доступного синтезатора"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "Ошибка ExitWindowsEx: {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "Не удалось изменить громкость уха"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "Увеличить громкость NVDA на 5%"
 
@@ -80,11 +80,11 @@ msgstr "Увеличить громкость NVDA на 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Увеличить громкость, если она &ниже:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "Слева"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "Открыть режим громкости уха и объявить выбранное ухо: стрелки влево и вправо выбирают ухо, стрелки вверх и вниз изменяют его на 5, Enter делает оба уха равными, Escape закрывает. Любая другая клавиша также закрывает режим"
 
@@ -92,12 +92,12 @@ msgstr "Открыть режим громкости уха и объявить 
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Воспроизводить &звук при успешном включении аудио"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "Перезагрузка"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "Справа"
 
@@ -113,12 +113,12 @@ msgstr "Задать &пользовательский уровень громк
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Показывать диалог &подтверждения с обратным отсчётом перед выключением или перезагрузкой"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Завершение работы системы (одно нажатие) или перезагрузка (двойное нажатие)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "Завершение работы"
 
@@ -126,11 +126,11 @@ msgstr "Завершение работы"
 msgid "Switch to the default audio output &device"
 msgstr "Переключиться на &устройство вывода звука по умолчанию"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "Устройство вывода не является стереофоническим"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Предупреждение: ранее включённое звуковое устройство сейчас недоступно или отключено. Проверьте настройки звука."
 
@@ -138,15 +138,15 @@ msgstr "Предупреждение: ранее включённое звуко
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} через {seconds} сек. Нажмите любую клавишу для отмены."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear}: {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear}: {level}, максимум"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear}: {level}, минимум"
 
@@ -154,6 +154,6 @@ msgstr "{ear}: {level}, минимум"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

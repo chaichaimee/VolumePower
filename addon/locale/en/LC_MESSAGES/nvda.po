@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: English\n"
@@ -32,15 +32,15 @@ msgstr "&Repeat attempts to initialize the voice synthesizer driver"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "&Unmute all playback devices, not only the default one"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "Audio is muted"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "Both ears {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "Cancelled"
 
@@ -48,19 +48,19 @@ msgstr "Cancelled"
 msgid "Cannot get shutdown privilege"
 msgstr "Cannot get shutdown privilege"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "Decrease NVDA volume 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "Ear volume closed"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "Error: Failed to change NVDA volume"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "Error: No synthesizer available"
 
@@ -68,11 +68,11 @@ msgstr "Error: No synthesizer available"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx failed with error {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "Failed to change ear volume"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "Increase NVDA volume 5%"
 
@@ -80,11 +80,11 @@ msgstr "Increase NVDA volume 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Increase the volume if it is &lower than:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "Left"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 
@@ -92,12 +92,12 @@ msgstr "Open the ear volume layer and announce the selected ear: Left and Right 
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Play &sound when audio has been successfully turned on"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "Restart"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "Right"
 
@@ -113,12 +113,12 @@ msgstr "Set &custom volume level:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Show countdown &confirmation dialog before shutdown or restart"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Shut down the system (single tap) or restart it (double tap)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "Shutdown"
 
@@ -126,11 +126,11 @@ msgstr "Shutdown"
 msgid "Switch to the default audio output &device"
 msgstr "Switch to the default audio output &device"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "The output device is not stereo"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 
@@ -138,15 +138,15 @@ msgstr "Warning: a sound device that was previously enabled is now unavailable o
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} in {seconds}. Press any key to cancel."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear} {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear} {level}, maximum"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}, minimum"
 
@@ -154,6 +154,6 @@ msgstr "{ear} {level}, minimum"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

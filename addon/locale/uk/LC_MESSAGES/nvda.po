@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Ukrainian\n"
@@ -32,15 +32,15 @@ msgstr "Пов&торювати спроби ініціалізації драй
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "Увімкнути звук для &всех пристроїв відтворення, а не лише за замовчуванням"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "Звук вимкнено"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "Обидва вуха: {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "Скасовано"
 
@@ -48,19 +48,19 @@ msgstr "Скасовано"
 msgid "Cannot get shutdown privilege"
 msgstr "Не вдалося отримати привілеї завершення роботи"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "Зменшити гучність NVDA на 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "Гучність вуха вимкнено"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "Помилка: Не вдалося змінити гучність NVDA"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "Помилка: Немає доступного синтезатора"
 
@@ -68,11 +68,11 @@ msgstr "Помилка: Немає доступного синтезатора"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "Помилка ExitWindowsEx: {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "Не вдалося змінити гучність вуха"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "Збільшити гучність NVDA на 5%"
 
@@ -80,11 +80,11 @@ msgstr "Збільшити гучність NVDA на 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Збільшити гучність, якщо вона &нижча за:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "Ліворуч"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "Відкрити шар гучності вуха та оголосити вибране вухо: стрілки вліво та вправо вибирають вухо, стрілки вгору та вниз змінюють його на 5, Enter робить обидва вуха рівними, Escape закриває. Будь-яка інша клавіша також закриває шар"
 
@@ -92,12 +92,12 @@ msgstr "Відкрити шар гучності вуха та оголосит�
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Відтворювати &звук при успішному увімкненні аудіо"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "Перезавантаження"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "Праворуч"
 
@@ -113,12 +113,12 @@ msgstr "Встановити &власний уровень гучності:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Показувати діалог &підтвердження зі зворотним відліком перед вимкненням або перезавантаженням"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Завершення роботи системи (одне натискання) або перезавантаження (подвійне)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "Завершення роботи"
 
@@ -126,11 +126,11 @@ msgstr "Завершення роботи"
 msgid "Switch to the default audio output &device"
 msgstr "Переключитися на &пристрій виведення аудіо за замовчуванням"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "Пристрій виведення не є стерео"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Попередження: раніше увімкнений звуковий пристрій зараз недоступний або вимкнений. Будь ласка, перевірте налаштування звуку."
 
@@ -138,15 +138,15 @@ msgstr "Попередження: раніше увімкнений звуков
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} через {seconds} сек. Натисніть будь-яку клавішу для скасування."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear}: {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear}: {level}, максимум"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear}: {level}, мінімум"
 
@@ -154,6 +154,6 @@ msgstr "{ear}: {level}, мінімум"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

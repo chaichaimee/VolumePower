@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Simplified)\n"
@@ -32,15 +32,15 @@ msgstr "重复尝试初始化语音合成器驱动程序(&R)"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "取消所有播放设备的静音，而不只是默认设备(&U)"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "音频已静音"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "双耳 {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "已取消"
 
@@ -48,19 +48,19 @@ msgstr "已取消"
 msgid "Cannot get shutdown privilege"
 msgstr "无法获取关机权限"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "降低 NVDA 音量 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "耳朵音量已关闭"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "错误：无法更改 NVDA 音量"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "错误：没有可用的语音合成器"
 
@@ -68,11 +68,11 @@ msgstr "错误：没有可用的语音合成器"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx 失败，错误代码：{error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "更改耳朵音量失败"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "提高 NVDA 音量 5%"
 
@@ -80,11 +80,11 @@ msgstr "提高 NVDA 音量 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "如果音量低于此值则提高音量(&L):"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "左"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "打开耳朵音量层并播报所选耳朵：左右方向键选择耳朵，上下方向键以 5 为步长调整，回车键使双耳平衡，Esc 键关闭。任何其他按键也会关闭此层"
 
@@ -92,12 +92,12 @@ msgstr "打开耳朵音量层并播报所选耳朵：左右方向键选择耳朵
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "成功开启音频时播放声音(&S)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "重新启动"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "右"
 
@@ -113,12 +113,12 @@ msgstr "设置自定义音量级别(&C):"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "在关机或重启前显示倒计时确认对话框(&C)"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "关闭系统（单击）或重新启动（双击）"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "关机"
 
@@ -126,11 +126,11 @@ msgstr "关机"
 msgid "Switch to the default audio output &device"
 msgstr "切换到默认音频输出设备(&D)"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "输出设备不是立体声"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "警告：之前启用的音频设备现已不可用或已禁用。请检查声音设置。"
 
@@ -138,15 +138,15 @@ msgstr "警告：之前启用的音频设备现已不可用或已禁用。请检
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "将在 {seconds} 秒内{action}。按任意键取消。"
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear} {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear} {level}，最大"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}，最小"
 
@@ -154,6 +154,6 @@ msgstr "{ear} {level}，最小"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

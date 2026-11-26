@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Indonesian\n"
@@ -32,15 +32,15 @@ msgstr "&Ulangi upaya untuk menginisialisasi driver penyuara suara"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "Buka suar&a semua perangkat pemutaran, bukan hanya perangkat bawaan"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "Audio dimatikan"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "Kedua telinga {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "Dibatalkan"
 
@@ -48,19 +48,19 @@ msgstr "Dibatalkan"
 msgid "Cannot get shutdown privilege"
 msgstr "Tidak dapat memperoleh hak akses untuk mematikan"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "Kurangi volume NVDA sebesar 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "Volume telinga ditutup"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "Kesalahan: Gagal mengubah volume NVDA"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "Kesalahan: Tidak ada penyuara suara yang tersedia"
 
@@ -68,11 +68,11 @@ msgstr "Kesalahan: Tidak ada penyuara suara yang tersedia"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx gagal dengan kesalahan {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "Gagal mengubah volume telinga"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "Tingkatkan volume NVDA sebesar 5%"
 
@@ -80,11 +80,11 @@ msgstr "Tingkatkan volume NVDA sebesar 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Tingkatkan volume jika lebih &rendah dari:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "Kiri"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "Buka lapisan volume telinga dan umumkan telinga yang dipilih: Panah Kiri dan Kanan memilih telinga, Panah Atas dan Bawah mengubahnya sebesar 5, Enter menyamakan kedua telinga, Escape menutup. Tombol lain juga menutup lapisan"
 
@@ -92,12 +92,12 @@ msgstr "Buka lapisan volume telinga dan umumkan telinga yang dipilih: Panah Kiri
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "Putar &suara saat audio berhasil diaktifkan"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "Mulai Ulang"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "Kanan"
 
@@ -113,12 +113,12 @@ msgstr "Atur tingkat volume &kustom:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Tampilkan dialog kon&firmasi hitung mundur sebelum mematikan atau memulai ulang"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "Matikan sistem (tekan sekali) atau mulai ulang (tekan dua kali)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "Matikan"
 
@@ -126,11 +126,11 @@ msgstr "Matikan"
 msgid "Switch to the default audio output &device"
 msgstr "Beralih ke &perangkat output audio bawaan"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "Perangkat keluaran bukan stereo"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Peringatan: perangkat suara yang sebelumnya diaktifkan sekarang tidak tersedia atau dinonaktifkan. Silakan periksa pengaturan Suara."
 
@@ -138,15 +138,15 @@ msgstr "Peringatan: perangkat suara yang sebelumnya diaktifkan sekarang tidak te
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} dalam {seconds}. Tekan tombol apa saja untuk membatalkan."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear} {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear} {level}, maksimum"
 
-#: addonCore.py:190
+#: addonCore.py:208
 # keep-identical
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}, minimum"
@@ -155,6 +155,6 @@ msgstr "{ear} {level}, minimum"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

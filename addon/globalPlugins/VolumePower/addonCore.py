@@ -22,6 +22,7 @@ from .settings import AudioGuardSettingsPanel
 POWER_TAP_THRESHOLD_SECONDS = 0.3
 EAR_BEEP_LENGTH_MS = 80
 EAR_BEEP_VOLUME = 60
+STARTUP_CHECKS_DELAY_MS = 3000
 
 EAR_LAYER_GESTURES = {
 	"kb:upArrow": "earUp",
@@ -45,16 +46,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._isActive = True
 		self._earLayerActive = False
 		self._earSide = channelBalance.LEFT
+		self._startupChecksCall = None
 		self._audioGuardEngine = audioGuard.getActiveEngine()
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(AudioGuardSettingsPanel)
-		Thread(target=self._audioGuardEngine.runStartupChecks, daemon=True).start()
+		log.info("VolumePower: initializing")
+		# Deferred until NVDA has finished loading every global plugin, so the audio service
+		# queries and COM cleanup of the startup checks never overlap with plugin loading.
+		self._startupChecksCall = core.callLater(STARTUP_CHECKS_DELAY_MS, self._startAudioGuardChecks)
 		self._audioGuardEngine.applySleepPrevention()
 		if self._audioGuardEngine.settings["reinit"]:
 			self._audioGuardEngine.resetSynth()
+		log.info("VolumePower: initialized")
+
+	def _startAudioGuardChecks(self) -> None:
+		self._startupChecksCall = None
+		if not self._isActive:
+			return
+		Thread(target=self._audioGuardEngine.runStartupChecks, daemon=True, name="VolumePowerStartupChecks").start()
 
 	def terminate(self, *args, **kwargs) -> None:
 		"""This will be called when NVDA is finished with this global plugin."""
 		self._isActive = False
+		if self._startupChecksCall is not None:
+			try:
+				self._startupChecksCall.Stop()
+			except Exception as stopError:
+				log.debug("Failed to stop pending startup checks timer: %s", str(stopError))
+			self._startupChecksCall = None
 		self._exitEarLayer()
 		channelBalance.shutdown()
 		super().terminate(*args, **kwargs)

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: German\n"
@@ -32,15 +32,15 @@ msgstr "Versuche zur Initialisie&rung des Sprachausgabe-Treibers wiederholen"
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "Stummschaltung für &alle Wiedergabegeräte aufheben, nicht nur für das Standardgerät"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "Ton ist stummgeschaltet"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "Beide Ohren {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
@@ -48,19 +48,19 @@ msgstr "Abgebrochen"
 msgid "Cannot get shutdown privilege"
 msgstr "Berechtigung zum Herunterfahren kann nicht abgerufen werden"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "NVDA-Lautstärke um 5% verringern"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "Ohrenlautstärke geschlossen"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "Fehler: NVDA-Lautstärke konnte nicht geändert werden"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "Fehler: Keine Sprachausgabe verfügbar"
 
@@ -68,11 +68,11 @@ msgstr "Fehler: Keine Sprachausgabe verfügbar"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "ExitWindowsEx fehlgeschlagen mit Fehler {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "Fehler beim Ändern der Ohrenlautstärke"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "NVDA-Lautstärke um 5% erhöhen"
 
@@ -80,11 +80,11 @@ msgstr "NVDA-Lautstärke um 5% erhöhen"
 msgid "Increase the volume if it is &lower than:"
 msgstr "Lautstärke erhöhen, wenn sie &niedriger ist als:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "Links"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "Öffnet die Ohrenlautstärke-Ebene und gibt das ausgewählte Ohr aus: Mit den Pfeiltasten Links und Rechts wird das Ohr ausgewählt, mit Oben und Unten der Wert um 5 geändert, die Eingabetaste gleicht beide Ohren an, Escape schließt die Ebene. Jede andere Taste schließt die Ebene ebenfalls"
 
@@ -92,12 +92,12 @@ msgstr "Öffnet die Ohrenlautstärke-Ebene und gibt das ausgewählte Ohr aus: Mi
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "&Sound abspielen, wenn das Audio erfolgreich aktiviert wurde"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "Neu starten"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "Rechts"
 
@@ -113,12 +113,12 @@ msgstr "&Benutzerdefinierte Lautstärke festlegen:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "Bestätigungsdialog mit &Countdown vor dem Herunterfahren oder Neustarten anzeigen"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "System herunterfahren (einmal drücken) oder neu starten (doppelt drücken)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "Herunterfahren"
 
@@ -126,11 +126,11 @@ msgstr "Herunterfahren"
 msgid "Switch to the default audio output &device"
 msgstr "Zum Standard-Audioausgabe&gerät wechseln"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "Das Ausgabegerät ist nicht in Stereo"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "Warnung: Ein zuvor aktiviertes Soundgerät ist jetzt nicht verfügbar oder deaktiviert. Bitte überprüfen Sie die Sound-Einstellungen."
 
@@ -138,15 +138,15 @@ msgstr "Warnung: Ein zuvor aktiviertes Soundgerät ist jetzt nicht verfügbar od
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "{action} in {seconds}. Drücken Sie eine beliebige Taste zum Abbrechen."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear} {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear} {level}, Maximum"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}, Minimum"
 
@@ -154,6 +154,6 @@ msgstr "{ear} {level}, Minimum"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"

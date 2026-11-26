@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VolumePower 2026.11.1\n"
+"Project-Id-Version: VolumePower 2026.12.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-30 06:39+0700\n"
+"POT-Creation-Date: 2026-11-26 06:35+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Arabic\n"
@@ -32,15 +32,15 @@ msgstr "&تكرار محاولات تهيئة برنامج تشغيل آلة ا�
 msgid "&Unmute all playback devices, not only the default one"
 msgstr "إلغاء &كتم جميع أجهزة التشغيل، وليس الجهاز الافتراضي فقط"
 
-#: addonCore.py:174
+#: addonCore.py:192
 msgid "Audio is muted"
 msgstr "الصوت مكتوم"
 
-#: addonCore.py:181
+#: addonCore.py:199
 msgid "Both ears {level}"
 msgstr "الأذنان معاً {level}"
 
-#: addonCore.py:232
+#: addonCore.py:250
 msgid "Cancelled"
 msgstr "تم الإلغاء"
 
@@ -48,19 +48,19 @@ msgstr "تم الإلغاء"
 msgid "Cannot get shutdown privilege"
 msgstr "تعذر الحصول على صلاحية إيقاف التشغيل"
 
-#: addonCore.py:86
+#: addonCore.py:104
 msgid "Decrease NVDA volume 5%"
 msgstr "ทخفيض مستوى صوت NVDA بمقدار 5%"
 
-#: addonCore.py:145
+#: addonCore.py:163
 msgid "Ear volume closed"
 msgstr "صوت الأذن مغلق"
 
-#: addonCore.py:104
+#: addonCore.py:122
 msgid "Error: Failed to change NVDA volume"
 msgstr "خطأ: فشล تغيير مستوى صوت NVDA"
 
-#: addonCore.py:94
+#: addonCore.py:112
 msgid "Error: No synthesizer available"
 msgstr "خطأ: لا يوجد آلة نطق متاحة"
 
@@ -68,11 +68,11 @@ msgstr "خطأ: لا يوجد آلة نطق متاحة"
 msgid "ExitWindowsEx failed with error {error}"
 msgstr "فشل ExitWindowsEx بالخطأ {error}"
 
-#: addonCore.py:178
+#: addonCore.py:196
 msgid "Failed to change ear volume"
 msgstr "فشل تغيير مستوى صوت الأذن"
 
-#: addonCore.py:79
+#: addonCore.py:97
 msgid "Increase NVDA volume 5%"
 msgstr "زيادة مستوى صوت NVDA بمقدار 5%"
 
@@ -80,11 +80,11 @@ msgstr "زيادة مستوى صوت NVDA بمقدار 5%"
 msgid "Increase the volume if it is &lower than:"
 msgstr "&رفع مستوى الصوت إذا كان أقل من:"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Left"
 msgstr "اليسار"
 
-#: addonCore.py:119
+#: addonCore.py:137
 msgid "Open the ear volume layer and announce the selected ear: Left and Right arrows select the ear, Up and Down arrows change it by 5, Enter makes both ears equal, Escape closes. Any other key also closes the layer"
 msgstr "افتح طبقة مستوى صوت الأذن وانطق الأذن المحددة: سهمَا اليسار واليمين يحددان الأذن، وسهمَا الأعلى والأسفل يغيران المستوى بمقدار 5، ومفتاح الإدخال يجعل الأذنين متساويتين، ومفتاح الهروب يغلق الطبقة. أي مفتاح آخر يغلق الطبقة أيضاً"
 
@@ -92,12 +92,12 @@ msgstr "افتح طبقة مستوى صوت الأذن وانطق الأذن ا�
 msgid "Play &sound when audio has been successfully turned on"
 msgstr "&تشغيل صوت عند تشغيل الصوت بنجاح"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Restart"
 msgstr "إعادة التشغيل"
 
-#: addonCore.py:186
+#: addonCore.py:204
 msgid "Right"
 msgstr "اليمين"
 
@@ -113,12 +113,12 @@ msgstr "تحديد مستوى صوت &مخصص:"
 msgid "Show countdown &confirmation dialog before shutdown or restart"
 msgstr "إظهار مربع &حوار تأكيد العد التنازلي قبل إيقاف التشغيل أو إعادة التشغيل"
 
-#: addonCore.py:210
+#: addonCore.py:228
 msgid "Shut down the system (single tap) or restart it (double tap)"
 msgstr "إيقاف تشغيل النظام (ضغط واحدة) أو إعادة تشغيله (ضغطتان)"
 
-#: addonCore.py:227
-#: addonCore.py:238
+#: addonCore.py:245
+#: addonCore.py:256
 msgid "Shutdown"
 msgstr "إيقاف التشغيل"
 
@@ -126,11 +126,11 @@ msgstr "إيقاف التشغيل"
 msgid "Switch to the default audio output &device"
 msgstr "التبديل إلى جهاز &إخراج الصوت الافتراضي"
 
-#: addonCore.py:176
+#: addonCore.py:194
 msgid "The output device is not stereo"
 msgstr "جهاز الإخراج ليس ستيريو"
 
-#: audioGuard.py:306
+#: audioGuard.py:340
 msgid "Warning: a sound device that was previously enabled is now unavailable or disabled. Please check Sound settings."
 msgstr "تحذير: جهاز الصوت الذي تم تمكينه سابقاً غير متاح أو معطل الآن. يرجى التحقق من إعدادات الصوت."
 
@@ -138,15 +138,15 @@ msgstr "تحذير: جهاز الصوت الذي تم تمكينه سابقاً 
 msgid "{action} in {seconds}. Press any key to cancel."
 msgstr "سيتم {action} خلال {seconds}. اضغط على أي مفتاح للإلغاء."
 
-#: addonCore.py:192
+#: addonCore.py:210
 msgid "{ear} {level}"
 msgstr "{ear} {level}"
 
-#: addonCore.py:188
+#: addonCore.py:206
 msgid "{ear} {level}, maximum"
 msgstr "{ear} {level}، الحد الأقصى"
 
-#: addonCore.py:190
+#: addonCore.py:208
 msgid "{ear} {level}, minimum"
 msgstr "{ear} {level}، الحد الأدنى"
 
@@ -154,6 +154,6 @@ msgstr "{ear} {level}، الحد الأدنى"
 msgid "{seconds}..."
 msgstr "{seconds}..."
 
-#: addonCore.py:101
+#: addonCore.py:119
 msgid "{volume}%"
 msgstr "{volume}%"
